@@ -9,16 +9,33 @@
     <title>DEVinBanco</title>
   </head>
   <body>
-    <h1>DEVinBanco</h1>
-    <div>
-      <form action="">
-        <select name="" id="">
-          <option value="">Sacar</option>
-          <option value="">Depositar</option>
-        </select>
-        <input type="number" placeholder="Valor" />
-        <button>Confirmar</button>
+    <header><h1>DEVinBanco</h1></header>
+
+    <main>
+      <form id="form">
+        <div class="formGroup">
+          <label>Conta: </label>
+          <select id="conta" class="field"></select>
+        </div>
+
+        <div class="formGroup">
+          <label>Valor:</label>
+          <input id="valor" class="field" type="number" />
+        </div>
+
+        <div class="formGroup">
+          <label>Operação:</label>
+          <select id="operacao" class="field">
+            <option value="0">(Selecione)</option>
+            <option value="1">Sacar</option>
+            <option value="2">Depositar</option>
+          </select>
+        </div>
+
+        <button id="confirmar" class="button-confirm">Confirmar</button>
       </form>
-    </div>
+
+      <strong id="mensagem"></strong>
+    </main>
   </body>
 </html>
