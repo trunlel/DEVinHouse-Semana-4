@@ -5,37 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js" defer></script>
-    <title>DEVinBanco</title>
   </head>
   <body>
-    <header><h1>DEVinBanco</h1></header>
+    <div class="container">
+      <header>
+        <h1>DEVinBanco</h1>
+      </header>
+      <main>
+        <form id="form">
+          <div class="operationcs">
+            <label>Conta:</label>
+            <select id="conta" class="field"></select>
+          </div>
 
-    <main>
-      <form id="form">
-        <div class="formGroup">
-          <label>Conta: </label>
-          <select id="conta" class="field"></select>
-        </div>
+          <div class="form-control">
+            <input class="valorstyle" id="valor" type="number" required />
+            <label>Valor</label>
+          </div>
 
-        <div class="formGroup">
-          <label>Valor:</label>
-          <input id="valor" class="field" type="number" />
-        </div>
+          <div class="operationcs">
+            <label>Operação:</label>
+            <select id="operacao" class="field">
+              <option value="0">Selecione</option>
+              <option value="1">Sacar</option>
+              <option value="2">Depositar</option>
+            </select>
+          </div>
 
-        <div class="formGroup">
-          <label>Operação:</label>
-          <select id="operacao" class="field">
-            <option value="0">(Selecione)</option>
-            <option value="1">Sacar</option>
-            <option value="2">Depositar</option>
-          </select>
-        </div>
+          <div class="form-control">
+            <input id="senha" type="password" required />
+            <label>Senha</label>
+          </div>
 
-        <button id="confirmar" class="button-confirm">Confirmar</button>
-      </form>
+          <button id="confirmar" class="btn">Confirmar</button>
+        </form>
+      </main>
+    </div>
 
-      <strong id="mensagem"></strong>
-    </main>
+    <script src="index.js" defer></script>
   </body>
+  <div class="alertbutton">
+    <span id="mensagem"></span>
+  </div>
 </html>
